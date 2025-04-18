@@ -104,7 +104,7 @@ export default function Home() {
                 </Typography>
               </CardContent>
               <CardActions sx={{ px: 2, pb: 2 }}>
-                <Link href={item.href} passHref legacyBehavior>
+                <Link href={item.href} passHref>
                   <Button
                     variant="contained"
                     fullWidth
