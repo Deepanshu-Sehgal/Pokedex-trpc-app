@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { trpc } from '@/lib/trpc';
-import PokedexTable from '@/components/PokedexTable';
+import { useState } from "react";
+import { trpc } from "@/lib/trpc";
+import PokedexTable from "@/components/PokedexTable";
 import {
   Container,
   Typography,
@@ -12,12 +12,12 @@ import {
   Alert,
   Paper,
   Fade,
-} from '@mui/material';
+} from "@mui/material";
 
 export default function ByArray() {
-  const [names, setNames] = useState('Bulbasaur,Charmander');
+  const [names, setNames] = useState("Bulbasaur,Charmander");
   const nameArray = names
-    .split(',')
+    .split(",")
     .map((n) => n.trim())
     .filter((n) => n);
 

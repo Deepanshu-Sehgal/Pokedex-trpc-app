@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { trpc } from '@/lib/trpc';
-import PokemonRow from '@/components/PokemonRow';
+import { useState } from "react";
+import { trpc } from "@/lib/trpc";
+import PokemonRow from "@/components/PokemonRow";
 import {
   Container,
   TextField,
@@ -11,10 +11,10 @@ import {
   Alert,
   Box,
   Button,
-} from '@mui/material';
+} from "@mui/material";
 
 export default function SearchByName() {
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
   const [queryName, setQueryName] = useState<string | null>(null);
 
   const query = trpc.pokemon.getByName.useQuery(queryName!, {
@@ -64,15 +64,13 @@ export default function SearchByName() {
               height={100}
               style={{ opacity: 0.6 }}
             />
-            <Alert severity="error" sx={{ mt: 2, maxWidth: 400, mx: 'auto' }}>
-              {query.error.message || 'Pokémon not found!'}
+            <Alert severity="error" sx={{ mt: 2, maxWidth: 400, mx: "auto" }}>
+              {query.error.message || "Pokémon not found!"}
             </Alert>
           </Box>
         )}
 
-        {!query.isLoading && query.data && (
-          <PokemonRow pokemon={query.data} />
-        )}
+        {!query.isLoading && query.data && <PokemonRow pokemon={query.data} />}
       </Box>
     </Container>
   );
