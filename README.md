@@ -45,3 +45,64 @@ src/
 prisma/
 ├── schema.prisma          # Prisma DB schema
 ├── seed.ts                # Pokémon data seeder
+
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/pokedex-trpc-app.git
+cd pokedex-trpc-app
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Set up PostgreSQL and `.env`
+
+```env
+DATABASE_URL="your_postgresql_connection_string"
+```
+
+### 4. Prisma migration and seeding
+
+```bash
+npx prisma migrate dev --name init
+npx prisma generate
+npx prisma db seed
+```
+
+### 5. Start the dev server
+
+```bash
+npm run dev
+```
+
+---
+
+## 🧪 Example Queries
+
+### 🔹 Get a Pokémon by name
+
+```ts
+const { data } = trpc.pokemon.getByName.useQuery('Pikachu');
+```
+
+### 🔹 Get Pokémon by array
+
+```ts
+const { data } = trpc.pokemon.getByNames.useQuery(['Pikachu', 'Charmander']);
+```
+
+### 🔹 Get Pokémon by type
+
+```ts
+const { data } = trpc.pokemon.getByType.useQuery('fire');
+```
+
