@@ -45,6 +45,7 @@ src/
 prisma/
 ├── schema.prisma          # Prisma DB schema
 ├── seed.ts                # Pokémon data seeder
+```
 
 
 ---
