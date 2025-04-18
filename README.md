@@ -2,7 +2,10 @@
 
 A full-stack Pokédex application built with **TypeScript**, **Next.js App Router**, **Prisma + PostgreSQL**, **tRPC**, and **Material UI**. Search Pokémon by name, list multiple Pokémon, or filter them by type — all with beautiful UI and smooth animations!
 
-![Pokedex UI Screenshot](./public/preview.png)
+![Pokedex UI Screenshot](./public/Home.png)
+![Pokedex UI Screenshot](./public/ByName.png)
+![Pokedex UI Screenshot](./public/ByArray.png)
+![Pokedex UI Screenshot](./public/ByType.png)
 
 ---
 
