@@ -55,7 +55,7 @@ prisma/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/pokedex-trpc-app.git
+git clone https://github.com/Deepanshu-Sehgal/Pokedex-trpc-app
 cd pokedex-trpc-app
 ```
 
